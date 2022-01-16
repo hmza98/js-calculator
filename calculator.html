@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <style>
+      .playarea {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+        padding: 70px 0;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 2px solid rebeccapurple;
+      }
+
+      .button {
+        width: 100px;
+        height: 70x;
+        font-size: medium;
+        padding: 10px;
+      }
+
+      input {
+        padding: 10px;
+      }
+
+      select {
+        width: 60px;
+        height: 30px;
+        font-size: xx-large;
+      }
+    </style>
+
+    <script src="calculator.js"></script>
+  </head>
+
+  <body>
+    <div class="playarea">
+      <form onsubmit="calculator()">
+        <h1><label for="operand1">Enter your expression:</label><br /></h1>
+
+        <input id="op1" type="text" placeholder="Operand 1" required value="" />
+
+        <select id="operation" name="operations">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+          <option value="^">^</option>
+        </select>
+
+        <input
+          id="op2"
+          type="text"
+          placeholder="Operand 2"
+          required
+        /><br /><br />
+
+        <input
+          class="button"
+          type="button"
+          value="Solve"
+          onclick="calculator()"
+        />
+      </form>
+
+      <h4 id="res">Waiting for an expression..</h4>
+    </div>
+  </body>
+</html>
